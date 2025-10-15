@@ -53,7 +53,7 @@ impl Counter {
         )]))
     }
 
-    #[tool(description = "Decrement the counter by 1")]
+    #[tool(description = "Get value")]
     async fn get_value(&self) -> Result<CallToolResult, McpError> {
         let counter = self.counter.lock().await;
         Ok(CallToolResult::success(vec![Content::text(
